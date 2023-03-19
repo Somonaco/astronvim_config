@@ -9,4 +9,6 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+      { "EdenEast/nightfox.nvim" },
+      { "ThePrimeagen/harpoon" },
 }
