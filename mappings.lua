@@ -21,7 +21,7 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>a"] = { require("harpoon.mark").add_file, desc = "Add file to harpoon" },
-    ["<C-h>"] = { require("harpoon.ui").toggle_quick_menu },
+    ["<C-b>"] = { require("harpoon.ui").toggle_quick_menu },
     ["<C-1>"] = { function() require("harpoon.ui").nav_file(1) end },
     ["<C-2>"] = { function() require("harpoon.ui").nav_file(2) end },
     ["<C-3>"] = { function() require("harpoon.ui").nav_file(3) end },
