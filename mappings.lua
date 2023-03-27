@@ -11,7 +11,10 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr)
+          require("astronvim.utils.buffer").close(
+            bufnr)
+        end)
       end,
       desc = "Pick to close",
     },
@@ -26,6 +29,16 @@ return {
     ["<C-2>"] = { function() require("harpoon.ui").nav_file(2) end },
     ["<C-3>"] = { function() require("harpoon.ui").nav_file(3) end },
     ["<C-4>"] = { function() require("harpoon.ui").nav_file(4) end },
+    -- lsp
+    ["<leader>lc"] = { "<cmd>lua vim.lsp.buf.incoming_calls()<cr>", desc = "Open call hierarchy" },
+    ["<leader>lo"] = { "<cmd>lua vim.lsp.buf.outgoing_calls()<cr>", desc = "Outgoing calls" },
+    -- ["gD"] = { "<cmd>lua vim.lsp.buf.declaration()<cr>", desc = "Goto declaration" },
+    -- ["gr"] = { "<cmd>lua vim.lsp.buf.references()<cr>", desc = "Show refrences" },
+    ["<leader>lH"] = { "<cmd>lua vim.lsp.buf.implementation()<cr>", desc = "Show implementation" },
+    -- clang
+    ["<F2>"] = { "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch source/header" },
+    -- undotree
+    ["<leader><F4>"] = { "<cmd>lua vim.cmd.UndotreeToggle()<cr>", desc = "Toggle undotree" },
   },
   t = {
     -- setting a mapping to false will disable it
