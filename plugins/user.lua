@@ -12,7 +12,7 @@ return {
       { "EdenEast/nightfox.nvim" },
       { "ThePrimeagen/harpoon" },
       { "mbbill/undotree" },
-      { "peterhoeg/vim-qml" },
+      { "peterhoeg/vim-qml" , event = "BufRead", ft = {"qml"}, },
       { "p00f/clangd_extensions.nvim" },
       { 'echasnovski/mini.nvim',      version = '*' },
 }
